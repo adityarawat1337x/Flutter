@@ -16,14 +16,22 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("App Bar"),
+        title: const Text("App Bar"),
       ),
       body: Center(
-        child: Container(
-          child: Text("$name $age saal ka hai"),
+        child: Text(
+          "$name $age saal ka hai",
+          textDirection: TextDirection.rtl,
         ),
       ),
-      drawer: Drawer(child: Container(child: Center(child: Text("Drawer")))),
+      drawer: const Drawer(
+        child: Center(
+          child: Text(
+            "Drawer",
+            textDirection: TextDirection.rtl,
+          ),
+        ),
+      ),
     );
   }
 }
