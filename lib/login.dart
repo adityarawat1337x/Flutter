@@ -105,7 +105,7 @@ class _LoginState extends State<Login> {
                     child: loggedIn
                         ? const Icon(Icons.done, color: Colors.white)
                         : const Text(
-                            "Login",
+                            "Sign In",
                             style: TextStyle(
                               fontSize: 15,
                               color: Colors.white,
