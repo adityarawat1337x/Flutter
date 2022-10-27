@@ -7,29 +7,29 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     double age = 21;
     String name = "aditya";
-    // bool isCool = true;
-    // var height = 5.8;
-    // var secondName = "kumar";
-    // const pi = 3.14; // constant value
-    // final double gravity =
-    //     9.8; // final is used to declare constant value but it can be changed later
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("App Bar"),
-      ),
-      body: Center(
-        child: Text(
-          "$name $age saal ka hai",
-          textDirection: TextDirection.rtl,
-        ),
-      ),
+      //! Drawer
       drawer: const Drawer(
         child: Center(
           child: Text(
-            "Drawer",
+            "This is a Drawer",
             textDirection: TextDirection.rtl,
           ),
+        ),
+      ),
+
+      //! AppBar
+      appBar: AppBar(
+        title: const Text("Catalogue App"),
+        centerTitle: true,
+      ),
+
+      //! Body
+      body: Center(
+        child: Text(
+          "$name $age saal ka hai",
+          textDirection: TextDirection.ltr,
         ),
       ),
     );
