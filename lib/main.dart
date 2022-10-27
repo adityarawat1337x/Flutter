@@ -12,7 +12,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       darkTheme: ThemeData(
         // brightness: Brightness.dark,
         fontFamily: GoogleFonts.notoSans().fontFamily,
