@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
           "Welcome",
           style: TextStyle(
             fontSize: 15,
-            color: Color.fromARGB(255, 127, 20, 248),
+            color: Color.fromARGB(255, 99, 108, 248),
             fontWeight: FontWeight.bold,
           ),
           textScaleFactor: 1.75,
@@ -43,7 +43,15 @@ class Login extends StatelessWidget {
         const SizedBox(height: 20),
         ElevatedButton(
           onPressed: () {},
-          style: TextButton.styleFrom(),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+                const Color.fromARGB(255, 99, 108, 248),
+              ),
+              fixedSize: MaterialStateProperty.all(
+                const Size(100, 40),
+              ),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)))),
           child: const Text("Login"),
         ),
       ]),

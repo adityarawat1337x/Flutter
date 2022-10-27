@@ -18,7 +18,8 @@ class Myapp extends StatelessWidget {
       ),
       theme: ThemeData(
         fontFamily: GoogleFonts.notoSans().fontFamily,
-        primarySwatch: Colors.deepPurple,
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 99, 108, 248)),
       ),
       initialRoute: "/login",
       routes: {
