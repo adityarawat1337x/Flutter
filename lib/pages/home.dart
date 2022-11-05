@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter_application_1/widgets/drawer.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -10,14 +11,7 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       //! Drawer
-      drawer: const Drawer(
-        child: Center(
-          child: Text(
-            "This is a Drawer",
-            textDirection: TextDirection.rtl,
-          ),
-        ),
-      ),
+      drawer: const AppDrawer(),
 
       //! AppBar
       appBar: AppBar(

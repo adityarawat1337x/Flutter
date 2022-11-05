@@ -12,7 +12,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       darkTheme: ThemeData(
         // brightness: Brightness.dark,
         fontFamily: GoogleFonts.notoSans().fontFamily,
@@ -26,7 +26,7 @@ class Myapp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 99, 108, 248)),
       ),
-      initialRoute: "/login",
+      initialRoute: MyRoutes.HomeRoute,
       routes: {
         MyRoutes.HomeRoute: (context) => const Home(),
         MyRoutes.LoginRoute: (context) => const Login(),
