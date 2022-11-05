@@ -15,8 +15,11 @@ class Home extends StatelessWidget {
 
       //! AppBar
       appBar: AppBar(
-        title: const Text("Catalogue App"),
         centerTitle: true,
+        elevation: 0.0,
+        title: const Text(
+          "Catalog App",
+        ),
       ),
 
       //! Body
