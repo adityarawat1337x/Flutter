@@ -1,13 +1,14 @@
 import "package:flutter/material.dart";
+import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
+import 'package:flutter_application_1/widgets/item_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double age = 21;
-    String name = "aditya";
+    final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
 
     return Scaffold(
       //! Drawer
@@ -23,10 +24,13 @@ class Home extends StatelessWidget {
       ),
 
       //! Body
-      body: Center(
-        child: Text(
-          "$name $age saal ka hai",
-          textDirection: TextDirection.ltr,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: dummyList.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(item: dummyList[index]);
+          },
         ),
       ),
     );

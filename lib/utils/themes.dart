@@ -9,21 +9,21 @@ class AppTheme {
       // ignore: prefer_const_constructors
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
-        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.black),
-        iconTheme: const IconThemeData(color: Colors.black),
+        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.amber),
+        iconTheme: const IconThemeData(color: Colors.amber),
       ),
       drawerTheme: const DrawerThemeData(backgroundColor: Colors.amber));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       primarySwatch: Colors.amber,
+      brightness: Brightness.dark,
       scaffoldBackgroundColor: Colors.black,
-      //brightness: Brightness.dark,
       fontFamily: GoogleFonts.notoSans().fontFamily,
       // ignore: prefer_const_constructors
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.black,
-        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.white),
-        iconTheme: const IconThemeData(color: Colors.white),
+        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.amber),
+        iconTheme: const IconThemeData(color: Colors.amber),
       ),
       drawerTheme: const DrawerThemeData(backgroundColor: Colors.amber));
 }
