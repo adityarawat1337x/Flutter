@@ -39,6 +39,12 @@ class _HomeState extends State<Home> {
 
       //! AppBar
       appBar: AppBar(
+        // ignore: prefer_const_constructors
+        systemOverlayStyle: SystemUiOverlayStyle(
+          systemNavigationBarColor:
+              ColorScheme.fromSwatch().primary, // Navigation bar
+          // statusBarColor: , // Status bar
+        ),
         centerTitle: true,
         elevation: 0.0,
         title: const Text("Catalog App"),
@@ -48,12 +54,34 @@ class _HomeState extends State<Home> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CatalogModel.items != null && CatalogModel.items.isNotEmpty
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10),
                 itemCount: CatalogModel.items.length,
                 itemBuilder: (context, index) {
-                  return ItemWidget(item: CatalogModel.items[index]);
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: GridTile(
+                          header: Container(
+                              padding: EdgeInsets.all(5),
+                              color: Colors.deepPurple,
+                              child: Text(CatalogModel.items[index].name)),
+                          footer:
+                              Text(CatalogModel.items[index].price.toString()),
+                          child:
+                              Image.network(CatalogModel.items[index].image)));
                 },
               )
+            // ListView.builder(
+            //     itemCount: CatalogModel.items.length,
+            //     itemBuilder: (context, index) {
+            //       return ItemWidget(item: CatalogModel.items[index]);
+            //     },
+            //   )
             : const Center(
                 child: CircularProgressIndicator(),
               ),
