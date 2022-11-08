@@ -3,27 +3,33 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-      primarySwatch: Colors.amber,
-      scaffoldBackgroundColor: Colors.white,
-      fontFamily: GoogleFonts.notoSans().fontFamily,
-      // ignore: prefer_const_constructors
-      appBarTheme: AppBarTheme(
-        backgroundColor: Colors.white,
-        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.amber),
-        iconTheme: const IconThemeData(color: Colors.amber),
-      ),
-      drawerTheme: const DrawerThemeData(backgroundColor: Colors.amber));
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: const ColorScheme.light().background,
+        fontFamily: GoogleFonts.notoSans().fontFamily,
+        // ignore: prefer_const_constructors
+        appBarTheme: AppBarTheme(
+          backgroundColor: const ColorScheme.light().background,
+          titleTextStyle:
+              const TextStyle(fontSize: 23, color: Colors.blueAccent),
+          iconTheme: const IconThemeData(color: Colors.blueAccent),
+        ),
+        drawerTheme: DrawerThemeData(
+            backgroundColor: const ColorScheme.light().background),
+      );
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-      primarySwatch: Colors.amber,
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: Colors.black,
-      fontFamily: GoogleFonts.notoSans().fontFamily,
-      // ignore: prefer_const_constructors
-      appBarTheme: AppBarTheme(
-        backgroundColor: Colors.black,
-        titleTextStyle: const TextStyle(fontSize: 23, color: Colors.amber),
-        iconTheme: const IconThemeData(color: Colors.amber),
-      ),
-      drawerTheme: const DrawerThemeData(backgroundColor: Colors.amber));
+        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const ColorScheme.dark().background,
+        fontFamily: GoogleFonts.notoSans().fontFamily,
+        // ignore: prefer_const_constructors
+        appBarTheme: AppBarTheme(
+          backgroundColor: const ColorScheme.dark().background,
+          titleTextStyle:
+              const TextStyle(fontSize: 23, color: Colors.blueAccent),
+          iconTheme: const IconThemeData(color: Colors.blueAccent),
+        ),
+        drawerTheme: DrawerThemeData(
+            backgroundColor: const ColorScheme.dark().background),
+      );
 }

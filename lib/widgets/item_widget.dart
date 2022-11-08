@@ -14,6 +14,7 @@ class ItemWidget extends StatelessWidget {
         title: Text(item.name),
         subtitle: Text(item.desc),
         onTap: () {
+          // ignore: avoid_print
           print(item.name);
         },
         trailing: Text(
